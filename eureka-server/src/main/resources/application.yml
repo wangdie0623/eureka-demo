@@ -1,0 +1,26 @@
+server:
+  #应用端口
+  port: 8761
+eureka:
+  client:
+    #是否注册自身 默认true 注册 false 不注册
+    register-with-eureka: false
+    #是否检查服务清单 默认true 检查 false不检查
+    fetch-registry: false
+  instance:
+    #主机域名
+    hostname: localhost
+  server:
+    #是否开启自我保护 默认true 开启  false 不开启
+    enable-self-preservation: false
+    #服务失效扫描时间 单位毫秒
+    eviction-interval-timer-in-ms: 5000
+
+spring:
+  application:
+    #应用名称
+    name: eureka-server
+
+logging:
+  #日志文件存储地址
+  path: logs
